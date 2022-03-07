@@ -1,0 +1,26 @@
+.postCard{
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.2);
+    border-radius: 30px;
+    padding: 40px;
+
+    background-color: #fff;
+    margin: 2vh 0 2vh 0;
+}
+
+.postCard > h1 {
+    color: #5c5aea;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+}
+
+.author > img{
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.author > span{
+    margin-left: 5px;
+}

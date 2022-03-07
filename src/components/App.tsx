@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
+import Post from "./Post"
+import '../styles/index.css';
+
 
 function App() {
   const [posts, setPosts]: [any, any] = useState([]);
@@ -20,15 +23,11 @@ function App() {
   
 
   return (
-    <div>
+    <div id="list">
       <h1>Posts</h1>
-      <ul>
         {posts.map((post:any) => (
-          <li key={post.id}>
-            {post.title}. {post.summary}
-          </li>
+          <Post post={post}/>
         ))}
-      </ul>
     </div>
   );
 }
