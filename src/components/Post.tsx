@@ -12,10 +12,18 @@ class Post extends React.Component{
             <div className='postCard'>
                 <h1>{this.state.post.title}</h1>
                 <div className='author'>
-                    <img className='avatar' src={this.state.post.author.avatar} alt="author avatar" />
+                    <img src={this.state.post.author.avatar} alt="author avatar" />
                     <span>{this.state.post.author.name}</span>
                 </div>
-                
+                <p>
+                    {this.state.post.summary}
+                </p>
+                <div className='categories'>
+                {this.state.post.categories.map(function(category:any){
+                    return <div>{category.name}</div>
+                }
+                )}
+                </div>
             </div>
         );
     }

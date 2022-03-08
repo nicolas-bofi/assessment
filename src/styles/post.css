@@ -11,6 +11,12 @@
     color: #5c5aea;
 }
 
+.postCard > p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: #727272;
+}
+
 .author{
     display: flex;
     align-items: center;
@@ -23,4 +29,19 @@
 
 .author > span{
     margin-left: 5px;
+    font-weight: bold;
+}
+
+.categories{
+    display: flex;
+}
+
+.categories > div {
+    background-color: #fff;
+    color: #5c5aea;
+    border: 2px solid #5c5aea;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 30px;
+    font-size: small;
 }
