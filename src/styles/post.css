@@ -5,6 +5,17 @@
 
     background-color: #fff;
     margin: 2vh 0 2vh 0;
+
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 .postCard > h1 {
@@ -34,13 +45,14 @@
 
 .categories{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .categories > div {
     background-color: #fff;
     color: #5c5aea;
     border: 2px solid #5c5aea;
-    margin-right: 5px;
+    margin: 2px;
     padding: 5px;
     border-radius: 30px;
     font-size: small;

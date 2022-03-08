@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/post.css';
 
-class Post extends React.Component{
+class Post extends React.Component<{}, {post: any}>{
     constructor(props) {
         super(props)
         this.state = {post: props.post}

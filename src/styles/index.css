@@ -15,3 +15,30 @@ code {
 #list{
   margin: 10% 20% 0% 20%;
 }
+
+#categorieList{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.notSelected{
+  background-color: #fff;
+  color: #24eba3;
+  border: 2px solid #24eba3;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color .5s,color .5s;
+}
+
+.selected{
+  background-color: #24eba3;
+  color: #fff;
+  border: 2px solid #fff;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color .5s,color .5s;
+}
