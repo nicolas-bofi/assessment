@@ -64,6 +64,7 @@ code {
   border-radius: 30px;
   font-weight: bolder;
   transition: background-color .5s,color .5s;
+  cursor: pointer;
 }
 
 .selected{
@@ -75,6 +76,7 @@ code {
   border-radius: 30px;
   font-weight: bolder;
   transition: background-color .5s,color .5s;
+  cursor: pointer;
 }
 
 .load-more{
@@ -88,4 +90,5 @@ code {
   width: fit-content;
   box-shadow: 0 2px 6px 0 rgba(0,0,0,.3);
   font-weight: bolder;
+  cursor: pointer;
 }
