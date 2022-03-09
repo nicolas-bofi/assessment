@@ -20,7 +20,7 @@ class Post extends React.Component<{}, {post: any}>{
                 </p>
                 <div className='categories'>
                 {this.state.post.categories.map(function(category:any){
-                    return <div>{category.name}</div>
+                    return <div key={category.id}>{category.name}</div>
                 }
                 )}
                 </div>

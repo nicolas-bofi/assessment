@@ -12,9 +12,43 @@ code {
     monospace;
 }
 
-#list{
-  margin: 10% 20% 0% 20%;
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #list{
+    margin: 10% 5% 0% 5%;
+  }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #list{
+    margin: 10% 10% 0% 10%;
+  }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #list{
+    margin: 10% 15% 0% 15%;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #list{
+    margin: 10% 20% 0% 20%;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #list{
+    margin: 10% 20% 0% 20%;
+  }
 }
+
+
 
 #categorieList{
   display:flex;
@@ -48,7 +82,7 @@ code {
   background-color: #363636;
   border-radius: 5px;
   font-size: 1.1em;
-  margin:10px auto;
+  margin:10px auto 40px auto;
   padding: 5px 10px;
   display: block;
   width: fit-content;

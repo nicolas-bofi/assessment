@@ -3,18 +3,19 @@ import axios from "axios";
 import Post from "./Post"
 import '../styles/index.css';
 
-
 function App() {
   const [posts, setPosts]: [any, any] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [categories, setCategories]: [string[], any] = useState([])
   const [visible, setVisible] = useState(3)
 
+  /* --- GET REQUEST --- */
   useEffect(() => {
     axios.get("/api/posts").then(function (response) {
       // handle success
       setPosts(response.data.posts);
 
+      //Get all distinct category
       var categoryList: Array<String> = ["All"]
       response.data.posts.forEach(post => {
         post.categories.forEach(category => {
@@ -35,20 +36,20 @@ function App() {
     });
   }, [])
 
+  /* --- HELPER --- */
+
   function loadMore() {
     setVisible(visible + 3)
   }
 
+  //Check if one of the category of the post is the one selected
   function isSelectable(post){
-    var toReturn = false
-    post.categories.forEach(category => {
-      if(category.name === selectedCategory){
-        toReturn =  true
-      }
-    })
-    return toReturn
+    return post.categories.some(c => c.name === selectedCategory)
   }
 
+  /* --- LIST CONSTRUCTION --- */
+
+  //Complete list
   function all(){
     return (
       <div>
@@ -65,12 +66,12 @@ function App() {
     )
   }
 
+  //List with filtered with a category
   function filtered(){
     return (
       <div>
         {
           posts.filter((post) => isSelectable(post)).slice(0, visible).map(function(p: any){
-            console.log(p.title)
             return <Post key={p.id} {...{post: p}}/>
           })
         }
@@ -81,6 +82,8 @@ function App() {
       </div>
     )
   }
+
+  /* --- VIEW --- */
 
   return (
     <div id="list">
